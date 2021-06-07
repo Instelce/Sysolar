@@ -1,0 +1,50 @@
+// Variables
+$color-white: #ffffff;
+$color-blue-jeans: #35b4ff;
+$color-true-blue: #0466c8;
+$color-oxford-blue: #070e2b;
+$color-rich-black: #02071a;
+
+$font-main: "ClashDisplay-Variable", sans-serif;
+$font-secondary: "Poppins", sans-serif;
+
+$padding-vertical: 14%;
+
+// Main Style
+body {
+	position: relative;
+	overflow-x: hidden;
+
+	background: linear-gradient(330deg, rgba(2,7,26,1) 0%, rgba(7,14,43,1) 100%);
+
+	font-family: $font-main;
+	color: $color-white;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+// Navbar
+.navbar {
+	width: 100%;
+	padding: 20px $padding-vertical;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.navbar__brand {
+		font-size: 2rem;
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: 2px;
+
+		transition: text-shadow 0.3s;
+
+		&:hover {
+			text-shadow: 0px 2px 0px $color-blue-jeans;
+		}
+	}
+}
