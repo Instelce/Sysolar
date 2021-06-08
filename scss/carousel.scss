@@ -1,0 +1,47 @@
+// Carousel Style
+.carousel {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel__container {
+  transform: translate3d(0, 0, 0);
+  transition: transform 1s ease-in-out;
+
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+.carousel__item {
+  float: left;
+}
+
+.carousel__next,
+.carousel__prev {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  position: absolute;
+  background: url("../images/arrow.svg") no-repeat center center;
+  background-size: 24px 24px;
+  border-radius: 50%;
+  top: 50%; right: 10px;
+  margin-top: -20px;
+  cursor: pointer;
+  transition: opacity 0.3s, width 0.3s;
+}
+
+.carousel__prev {
+  right: auto;
+  left: 10px;
+  transform: rotate(180deg);
+}
+
+.carousel__next--hidden,
+.carousel__prev--hidden {
+  width: 0;
+}
