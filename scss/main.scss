@@ -22,6 +22,10 @@ body {
 	color: $color-white;
 }
 
+*:focus {
+	outline: 1px solid $color-blue-jeans;
+}
+
 a {
 	text-decoration: none;
 	color: inherit;
@@ -55,7 +59,7 @@ a {
 }
 
 // Planet Carousel
-.planet__carousel {
+.planets__carousel {
 	width: 100%;
 	height: 100vh;
 	top: 0;
@@ -63,7 +67,7 @@ a {
 	overflow: hidden;
 	position: fixed;
 
-	.planet__container {
+	.planet {
 		width: 100%;
 		height: 100vh;
 		position: relative;
@@ -76,4 +80,4 @@ a {
 
 
 // Imports
-@import "carousel";
+@import 'carousel.scss';

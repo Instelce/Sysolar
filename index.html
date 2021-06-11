@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sysolar</title>
 
-    <!-- Font Link -->
-    <link rel="stylesheet" href="css/clash-display.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sysolar</title>
 
-    <!-- CSS Link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css">
-    <link rel="stylesheet" href="css/main.css">
-  </head>
-  <body>
-    <nav class="navbar">
-      <a href="#" class="navbar__brand">Sysolar</a>
-    </nav>
+  <!-- Font Link -->
+  <link rel="stylesheet" href="css/clash-display.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
-    <div id="carousel" class="planet__carousel">
-      <div class="planet__container">
-        <h1>Earth</h1>
-        <canvas id="earth"></canvas>
-      </div>
-      <div class="planet__container">
-        <h1>2</h1>
-      </div>
-      <div class="planet__container">
-        <h1>3</h1>
-      </div>
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <a href="#" class="navbar__brand">Sysolar</a>
+  </nav>
+
+  <div id="carousel" class="planets__carousel">
+    <div class="planet">
+      <canvas id="earth"></canvas>
     </div>
+    <div class="planet">
+      <canvas id="mars"></canvas>
+    </div>
+    <div class="planet">
+      <h1>3</h1>
+    </div>
+  </div>
 
-    <script type="module" src="js/main.js"></script>
-    <script src="js/carousel.js"></script>
-  </body>
+  <script src="carousel.js"></script>
+  <script type="module" src="/main.js"></script>
+</body>
+
 </html>
