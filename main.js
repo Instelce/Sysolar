@@ -2,20 +2,20 @@ import './css/style.css'
 import * as THREE from 'three';
 import { PointLight } from 'three';
 
+// For earth
+import vertexShader from './shaders/earth/vertex.glsl';
+import fragmentShader from './shaders/earth/fragment.glsl';
+
 
 class Planet {
 
   /**
    * @param {HTMLElement} canvas Canvas
-   * @param {Object} info
-   * @param {Object} [info.radius=5] Radius of the planet 
    */
 
-  constructor(canvas, info = {}) {
+  constructor(canvas, radius) {
     this.canvas = canvas
-    this.info = Object.assign({}, {
-      radius: 5,
-    }, info)
+    this.radius = radius
 
     this.planetsContainer = document.querySelector(".planet")
 
@@ -51,9 +51,9 @@ class Planet {
 
   createPlanetSphere() {
     this.planet = new THREE.Mesh(
-      new THREE.SphereGeometry(this.info.radius, 50, 50),
-      new THREE.MeshBasicMaterial({
-        color: 0x100be8,
+      new THREE.SphereGeometry(this.radius, 50, 50),
+      new THREE.ShaderMaterial({
+
       })
     )
     this.scene.add(this.planet)
@@ -72,5 +72,5 @@ class Planet {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  new Planet(document.querySelector('#earth'))
+  new Planet(document.querySelector('#earth'), 5)
 })
