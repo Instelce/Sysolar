@@ -75,6 +75,17 @@ a {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
+		canvas {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.planet__body {
+			position: absolute;
+			bottom: 0;
+		}
 	}
 }
 

@@ -55,6 +55,15 @@ a {
   align-items: center;
   justify-content: center;
 }
+.planets__carousel .planet canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.planets__carousel .planet .planet__body {
+  position: absolute;
+  bottom: 0;
+}
 
 .carousel {
   height: 100%;
